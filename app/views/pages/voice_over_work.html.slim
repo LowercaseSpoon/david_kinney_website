@@ -2,10 +2,12 @@ doctype html
 html
   head
     title David Kinney VO
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag "voice_over_work"
     = javascript_include_tag 'homepage'
-  div
-    body
+  
+  body
+    div
       p.name-header= I18n.t("name")
       p.voice-actor-header= I18n.t("voice_actor")
 
@@ -21,19 +23,20 @@ html
           = link_to I18n.t("nav_bar.voice_over_work"), voice_over_work_url
         li
           = link_to I18n.t("nav_bar.contact_me"), contact_me_url
-    br
-    br
 
-img.studio src=asset_path("studio.jpeg")
-br
-h2.studio-equipment-list= I18n.t("voice_over_equipment.studio_equipment_list")
-br
-ul.studio-equipment
-  li= I18n.t("voice_over_equipment.equipment_one")
+      button.hamburger 
+        | ☰
   br
-  li= I18n.t("voice_over_equipment.equipment_two")
   br
-  li= I18n.t("voice_over_equipment.equipment_three")
+  img.studio src=asset_path("studio.jpeg")
+  br
+  h2.studio-equipment-list= I18n.t("voice_over_equipment.studio_equipment_list")
+  br
+  ul.studio-equipment
+    li= I18n.t("voice_over_equipment.equipment_one")
+    br
+    li= I18n.t("voice_over_equipment.equipment_two")
+    br
+    li= I18n.t("voice_over_equipment.equipment_three")
 
   
-  / img src=asset_path("david_avatar-background.png") alt="Description of the image"
