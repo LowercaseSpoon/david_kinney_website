@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title David Kinney VO
+    = stylesheet_link_tag "homepage"
+    = javascript_include_tag 'homepage'
+  div
+    body
+      p.name-header= I18n.t("name")
+      p.voice-actor-header= I18n.t("voice_actor")
+
+    nav
+      ul
+        li 
+          img.letter-d src=asset_path("letter_d.png")
+        li 
+          = link_to I18n.t("nav_bar.home"), root_url
+        li
+          = link_to I18n.t("nav_bar.about_me"), about_me_url
+        li
+          = link_to I18n.t("nav_bar.voice_over_work"), voice_over_work_url
+        li
+         = link_to I18n.t("nav_bar.contact_me"), contact_me_url
+  
+  img src=asset_path("david_avatar-background.png") alt="Description of the image"
+
+
+      / button.hamburger
