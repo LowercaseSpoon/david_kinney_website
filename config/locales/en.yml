@@ -4,7 +4,7 @@ en:
     voice_over_work: Voice Over Work
     contact_me: Contact Me 
     home: Home
-  name: DAVID KINNEY
+  name: DAVID KINNEY JR
   voice_actor: Voice Actor
   about_me_box:
     about_me: About Me
@@ -12,6 +12,9 @@ en:
     about_me_section_two: Feel free to explore my portfolio and get in touch if you have any questions or collaboration ideas.
   voice_over_equipment: 
     studio_equipment_list: List of studio equipment
-    equipment_one: Microphone - (microphone brand)
-    equipment_two: Headphones - (headphones brand)
-    equipment_three: Sound Splitter - (sound splitter brand)
+    equipment_one: Elgato Wave DX Condenser XLR Microphone Focusrite Scarlett Solo Interface
+    equipment_two: DAW - Audacity and Adobe Audition Snap Vocal Sound Booth
+  voice_over_roles:
+    title: List of roles
+    walking_dead: Walking Dead Buried Reels
+    derrick: Character role - Derrick

@@ -154,3 +154,50 @@ nav {
     }
   }
 }
+
+.follow-me {
+  text-align: center;
+  margin-top: 20px;
+
+  a {
+    display: inline-block;
+    margin: 0 15px;
+    color: #333; /* Adjust color as needed */
+    font-size: 24px; /* Adjust font size as needed */
+    transition: color 0.3s;
+
+    &:hover {
+      color: #007bff; /* Change color on hover */
+    }
+  }
+
+  .twitter {
+    width: 30px; 
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .discord {
+    width: 150px; 
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .blue-sky {
+    width: 150px; 
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
