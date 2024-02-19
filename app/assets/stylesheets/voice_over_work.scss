@@ -40,7 +40,6 @@ body {
 }
 
 ul.studio-equipment {
-  // list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
@@ -54,6 +53,39 @@ h2.studio-equipment-list {
   justify-content: center;
 }
 
+.roles {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+}
+
+.derrick {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+}
+
+.walking-dead {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; // Adjust the height as needed
+
+  .walking-dead-video {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
 /* homepage.scss */
 
 nav {
@@ -61,7 +93,6 @@ nav {
   overflow: hidden;
   text-align: center;
   font-family: 'Arial', sans-serif;
-  // height: 30vh;
 
   ul {
     list-style-type: none;

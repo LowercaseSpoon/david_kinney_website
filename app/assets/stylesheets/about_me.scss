@@ -102,12 +102,17 @@ nav {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 
-  .profile-image {
-    img {
-      max-width: 100%;
-      border-radius: 50%;
-    }
+  img {
+    max-width: 100%;
+    border-radius: 50%;
+    width: 150px; 
+    display: inline-block;
+    vertical-align: middle;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
+
 
   .content {
     margin-top: 20px;

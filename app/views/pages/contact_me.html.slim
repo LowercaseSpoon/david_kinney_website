@@ -5,7 +5,8 @@ html
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag "contact_me"
     = javascript_include_tag 'homepage'
-  
+    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
+
   body
     div
       p.name-header= I18n.t("name")
@@ -28,17 +29,27 @@ html
         | ☰
     br
     br
-    .container
-      .contact-form
-        h2 Contact Me
-        form action="#" method="post"
-          label for="name" Name:
-          input type="text" id="name" name="name"
+  .follow-me
+    a href="https://twitter.com/DavidKinney101" title="Follow on Twitter" 
+      img.twitter src=asset_path("logo-black.png")
 
-          label for="email" Email:
-          input type="email" id="email" name="email" 
+    a href="https://discord.com/channels/dkvo125" title="Join me on Discord" 
+      img.discord src=asset_path("discord-logo-black.png")
 
-          label for="message" Message:
-          textarea id="message" name="message" rows="5" 
-          
-          button type="submit" Submit
+    a href="https://bsky.app/profile/davidkinneyjrvo.bsky.social" title="Follow on BlueSky" 
+      img.discord src=asset_path("blue_sky_butterfly.png")
+  br
+  .container
+    .contact-form
+      h2 Contact Me
+      form action="#" method="post"
+        label for="name" Name:
+        input type="text" id="name" name="name"
+
+        label for="email" Email:
+        input type="email" id="email" name="email" 
+
+        label for="message" Message:
+        textarea id="message" name="message" rows="5" 
+        
+        button type="submit" Submit
