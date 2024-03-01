@@ -21,7 +21,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #cffddd 20%, #ffffff 25%);
+  background: linear-gradient(to bottom, #cffddd 7%, #ffffff 5%);
   background-repeat: no-repeat;
 }
 
@@ -58,6 +58,11 @@ h2.studio-equipment-list {
   margin: 0;
   display: grid;
   justify-content: center;
+  background: linear-gradient(to right, #7bed9f, #44b39d);
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 40px;
 }
 
 .derrick {
@@ -65,6 +70,10 @@ h2.studio-equipment-list {
   margin: 0;
   display: grid;
   justify-content: center;
+  background: linear-gradient(to right, #7bed9f, #44b39d);
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
 }
 
 .walking-dead {
@@ -72,6 +81,10 @@ h2.studio-equipment-list {
   margin: 0;
   display: grid;
   justify-content: center;
+  background: linear-gradient(to right, #7bed9f, #44b39d);
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
 }
 
 .container {
@@ -86,6 +99,43 @@ h2.studio-equipment-list {
   }
 }
 
+.demo-reel {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; // Adjust the height as needed
+
+  .demo-reel-video {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.demo-reel {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; // Adjust the height as needed
+
+  .commercial-demo-video {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
 /* homepage.scss */
 
 nav {
