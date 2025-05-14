@@ -40,16 +40,17 @@ html
       img.discord src=asset_path("blue_sky_butterfly.png")
   br
   .container
-    .contact-form
-      h2 Contact Me
-      form action="#" method="post"
-        label for="name" Name:
-        input type="text" id="name" name="name"
+  .contact-form
+    h2 Contact Me
+    form data-controller="contact-me" data-action="submit->contact-me#submit"
+      label for="name" Name:
+      input type="text" id="name" name="name" data-contact-me-target="name"
 
-        label for="email" Email:
-        input type="email" id="email" name="email" 
+      label for="email" Email:
+      input type="email" id="email" name="email" data-contact-me-target="email"
 
-        label for="message" Message:
-        textarea id="message" name="message" rows="5" 
-        
-        button type="submit" Submit
+      label for="message" Message:
+      textarea id="message" name="message" rows="5" data-contact-me-target="message"
+
+      button type="submit" Submit
+
