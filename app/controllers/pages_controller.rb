@@ -11,7 +11,6 @@ class PagesController < ApplicationController
   end
 
   def submit
-    binding.pry
     if send_message(name: params[:name], email: params[:email], message: params[:message])
       render json: { success: true }
     else
