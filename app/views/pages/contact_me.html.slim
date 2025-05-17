@@ -29,28 +29,36 @@ html
         | ☰
     br
     br
-  .follow-me
-    a href="https://twitter.com/DavidKinney101" title="Follow on Twitter" 
-      img.twitter src=asset_path("logo-black.png")
+    .follow-me.text-center.my-4
+      h3.mb-3.follow-title Connect With Me
+      .social-links
+        a.social-icon.mx-3.twitter-hover href="https://twitter.com/DavidKinney101" title="Follow on Twitter" target="_blank" rel="noopener"
+          img.twitter src=asset_path("logo-black.png") alt="Twitter"
+          span.social-label X/Twitter
 
-    a href="https://discord.com/channels/dkvo125" title="Join me on Discord" 
-      img.discord src=asset_path("discord-logo-black.png")
+        a.social-icon.mx-3.discord-hover href="https://discord.com/channels/dkvo125" title="Join me on Discord" target="_blank" rel="noopener"
+          img.discord src=asset_path("discord-logo-black.png") alt="Discord"
+          span.social-label Discord
 
-    a href="https://bsky.app/profile/davidkinneyjrvo.bsky.social" title="Follow on BlueSky" 
-      img.discord src=asset_path("blue_sky_butterfly.png")
-  br
-  .container
-  .contact-form
-    h2 Contact Me
-    form data-controller="contact-me" data-action="submit->contact-me#submit"
-      label for="name" Name:
-      input type="text" id="name" name="name" data-contact-me-target="name"
+        a.social-icon.mx-3.bluesky-hover href="https://bsky.app/profile/davidkinneyjrvo.bsky.social" title="Follow on BlueSky" target="_blank" rel="noopener"
+          img.bluesky src=asset_path("blue_sky_butterfly.png") alt="BlueSky"
+          span.social-label BlueSky
+        a.social-icon.mx-3.imdb-hover href=""
+          img.imdb src=asset_path("imdb-branding.png") alt="IMDB"
+          span.social-label IMDB
+    br
+    .container
+    .contact-form
+      h2 Contact Me
+      form data-controller="contact-me" data-action="submit->contact-me#submit"
+        label for="name" Name:
+        input type="text" id="name" name="name" data-contact-me-target="name"
 
-      label for="email" Email:
-      input type="email" id="email" name="email" data-contact-me-target="email"
+        label for="email" Email:
+        input type="email" id="email" name="email" data-contact-me-target="email"
 
-      label for="message" Message:
-      textarea id="message" name="message" rows="5" data-contact-me-target="message"
+        label for="message" Message:
+        textarea id="message" name="message" rows="5" data-contact-me-target="message"
 
-      button type="submit" Submit
+        button type="submit" Submit
 

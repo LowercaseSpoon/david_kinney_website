@@ -156,48 +156,96 @@ nav {
 }
 
 .follow-me {
-  text-align: center;
-  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  a {
-    display: inline-block;
-    margin: 0 15px;
-    color: #333; /* Adjust color as needed */
-    font-size: 24px; /* Adjust font size as needed */
-    transition: color 0.3s;
-
-    &:hover {
-      color: #007bff; /* Change color on hover */
-    }
-  }
-
-  .twitter {
-    width: 30px; 
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .discord {
-    width: 150px; 
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .blue-sky {
-    width: 150px; 
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.follow-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #1DA1F2, #5865F2, #1DA1F2);
   }
 }
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Platform-specific hover effects
+.twitter-hover:hover {
+  .social-label { color: #1DA1F2; }
+}
+
+.discord-hover:hover {
+  .social-label { color: #5865F2; }
+}
+
+.bluesky-hover:hover {
+  .social-label { color: #0560ff; }
+}
+
+.imdb-hover:hover {
+  .social-label { color: #0560ff; }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .social-links {
+    gap: 1rem;
+  }
+  
+  .social-icon img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
