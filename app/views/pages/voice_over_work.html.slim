@@ -5,6 +5,8 @@ html
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag "voice_over_work"
     = javascript_include_tag 'homepage'
+    = stylesheet_link_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    = javascript_include_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
   
   body
     div
@@ -27,33 +29,38 @@ html
       button.hamburger 
         | ☰
 
-  br
-  h2.studio-equipment-list= I18n.t("voice_over_equipment.studio_equipment_list")
-  br
-  ul.studio-equipment
-    li= I18n.t("voice_over_equipment.equipment_one")
-    br
-    li= I18n.t("voice_over_equipment.equipment_two")
-  br
-  br
-  section.studio-section
-    img.studio src=asset_path("studio.jpeg")
-    br
-    h2.roles= I18n.t("voice_over_roles.title")
-    p.walking-dead= I18n.t("voice_over_roles.walking_dead")
-    p.derrick= I18n.t("voice_over_roles.derrick")
-    br
-    .container
-      iframe.walking-dead-video width="650" height="900" src="https://www.youtube.com/embed/8IsrUioKIjw?si=hFZbURhErL1gO7iv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
-    br
-    h2.roles= I18n.t("demo_reel.title")
-    br
-    br
-    .container
-      iframe.demo-reel-video width="650" height="900" src="https://www.youtube.com/embed/pgqg6L_CaFQ?si=keNo511d_8bOCIgJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
-    br
-    h2.roles= I18n.t("commercial_reel.title")
-    br
-    br
-    .container
-      iframe.commercial-demo-video width="650" height="900" src="https://www.youtube.com/embed/FVIMhLK3ciY?si=D7e_dV1bCgtFD4c0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+    #videoCarousel.carousel.slide.mb-5 data-bs-ride="false"
+      .carousel-indicators
+        button.active[type="button" data-bs-target="#videoCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Walking Dead"]
+        button[type="button" data-bs-target="#videoCarousel" data-bs-slide-to="1" aria-label="Demo Reel"]
+        button[type="button" data-bs-target="#videoCarousel" data-bs-slide-to="2" aria-label="Commercial Reel"]
+
+      .carousel-inner
+        .carousel-item.active
+          h2.text-center.mb-4.display-4.fw-bold.text-shadow-border= I18n.t("voice_over_roles.title")
+          .ratio.ratio-16x9
+            iframe[src="https://www.youtube.com/embed/8IsrUioKIjw?si=hFZbURhErL1gO7iv" 
+                  title="YouTube video player" 
+                  allowfullscreen]
+
+        .carousel-item
+          h2.text-center.mb-4.display-4.fw-bold.text-shadow-border= I18n.t("demo_reel.title")
+          .ratio.ratio-16x9.shadow-lg.rounded.overflow-hidden
+            iframe[src="https://www.youtube.com/embed/pgqg6L_CaFQ?si=keNo511d_8bOCIgJ" 
+                  title="YouTube video player" 
+                  allowfullscreen]
+
+        .carousel-item
+          h2.text-center.mb-4.display-4.fw-bold.text-shadow-border= I18n.t("commercial_reel.title")
+          .ratio.ratio-16x9.shadow-lg.rounded.overflow-hidden
+            iframe[src="https://www.youtube.com/embed/FVIMhLK3ciY?si=D7e_dV1bCgtFD4c0" 
+                  title="YouTube video player" 
+                  allowfullscreen]
+
+      button.carousel-control-prev[type="button" data-bs-target="#videoCarousel" data-bs-slide="prev"]
+        span.carousel-control-prev-icon aria-hidden="true"
+        span.visually-hidden Previous
+
+      button.carousel-control-next[type="button" data-bs-target="#videoCarousel" data-bs-slide="next"]
+        span.carousel-control-next-icon aria-hidden="true"
+        span.visually-hidden Next

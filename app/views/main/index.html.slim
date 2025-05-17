@@ -4,9 +4,13 @@ html
     title David Kinney VO
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag "homepage"
-    = javascript_include_tag 'homepage'
-
+    = javascript_pack_tag 'homepage', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'homepage', 'data-turbolinks-track': 'reload'
+  
   body
+    / figure out why js is not loading
+    / div.video-container
+    / = video_tag "video-intro.mp4", class: "background-video", autoplay: true, muted: true, playsinline: true, id: "intro-video"
     div
       p.name-header= I18n.t("name")
       p.voice-actor-header= I18n.t("voice_actor")

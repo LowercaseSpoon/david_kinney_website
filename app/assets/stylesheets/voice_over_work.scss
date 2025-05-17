@@ -193,3 +193,24 @@ nav {
     }
   }
 }
+
+.text-shadow-border {
+  color: #ffffff;
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+  letter-spacing: 1px;
+  
+  // Optional: Add a subtle gradient or glow effect
+  background: linear-gradient(45deg, #ffffff, #f0f0f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  // Optional: Add a subtle transition on hover
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
