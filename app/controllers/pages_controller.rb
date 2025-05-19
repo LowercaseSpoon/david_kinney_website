@@ -21,9 +21,7 @@ class PagesController < ApplicationController
   private
 
   def validate_params
-    params.require(:name)
-    params.require(:email)
-    params.require(:message)
+    params.require(:page).permit(:name, :email, :message)
   end
 
   def send_message(name:, email:, message:)
