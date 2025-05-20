@@ -11,6 +11,7 @@
   width: calc(100% + 20px);
   margin-top: -10px;
   margin-bottom: -10px;
+  position: fixed;
 }
 
 .voice-actor-header {
@@ -18,11 +19,17 @@
   text-align: center;
   font-size: 1em; 
   font-family: 'Marck Script', cursive;
+  position: fixed;
+  top: 8vh;
+  width: 100%;
+  // bottom: 15vh;
 }
 
 body {
   background: linear-gradient(to bottom, #cffddd 22%, #ffffff 25%);
   background-repeat: no-repeat;
+  top: 0;
+  height: 100vh;
 }
 
 .letter-d {
@@ -46,6 +53,9 @@ nav {
   overflow: hidden;
   text-align: center;
   font-family: 'Arial', sans-serif;
+  position: fixed;
+  width: 100%;
+  top: 15vh;
   // height: 30vh;
 
   ul {
@@ -98,16 +108,6 @@ nav {
   }
 }
 
-// Video styling
-// .video-container {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100vh;
-//   z-index: 1000;
-// }
-
 .background-video {
   position: fixed;
   top: 0;
@@ -122,4 +122,14 @@ nav {
   .video-container {
     padding: 10px;
   }
+}
+
+.background-image {
+  position: fixed;
+  bottom: 0;  // Changed from top to bottom
+  left: 0;
+  width: 100%;
+  height: 80vh;  // One-third of viewport height
+  object-fit: cover;
+  z-index: -1;    // Keeps it behind content
 }
