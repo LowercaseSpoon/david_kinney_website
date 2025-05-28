@@ -10,6 +10,9 @@ class PagesController < ApplicationController
   def contact_me
   end
 
+  def equipment_and_gear
+  end
+
   def submit
     if send_message(name: params[:name], email: params[:email], message: params[:message])
       render json: { success: true }
