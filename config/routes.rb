@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     get 'voice_over_work', to: 'pages#voice_over_work'
     get 'contact_me', to: 'pages#contact_me'
     post 'contact_me', to: 'pages#submit'
+    get 'equipment_and_gear', to: 'pages#equipment_and_gear'
   end
 end

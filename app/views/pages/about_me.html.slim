@@ -2,7 +2,7 @@ doctype html
 html
   head
     title David Kinney VO
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    / meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag "about_me"
     = javascript_include_tag 'homepage'
 
@@ -22,10 +22,12 @@ html
         li
           = link_to I18n.t("nav_bar.voice_over_work"), voice_over_work_url
         li
+          = link_to I18n.t("nav_bar.equipment_and_gear"), equipment_and_gear_url
+        li
           = link_to I18n.t("nav_bar.contact_me"), contact_me_url
 
-      button.hamburger 
-        | ☰
+      / button.hamburger 
+      /   | ☰
 
   br
   br

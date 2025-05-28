@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title David Kinney VO
+    / meta name="viewport" content="width=device-width, initial-scale=1.0"
+    = stylesheet_link_tag "equipment_and_gear"
+    / = javascript_include_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    / = stylesheet_link_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    / = javascript_pack_tag "equipment_and_gear"
+
+  body
+    div
+      p.name-header= I18n.t("name")
+      p.voice-actor-header= I18n.t("voice_actor")
+
+    nav
+      ul
+        li
+          img.letter-d src=asset_path("letter_d.png")
+        li
+          = link_to I18n.t("nav_bar.home"), root_url
+        li
+          = link_to I18n.t("nav_bar.about_me"), about_me_url
+        li
+          = link_to I18n.t("nav_bar.voice_over_work"), voice_over_work_url
+        li
+          = link_to I18n.t("nav_bar.equipment_and_gear"), equipment_and_gear_url
+        li
+          = link_to I18n.t("nav_bar.contact_me"), contact_me_url
+      / button.hamburger
+      /   | ☰
+
+    img.recording_equipment src=asset_path("recording-equipment.jpeg") alt="Recording Equipment"
+    img.background-image src=asset_path("david-kinney-background-d.jpeg")
+
