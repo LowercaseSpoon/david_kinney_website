@@ -4,9 +4,8 @@ html
     title David Kinney VO
     / meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag "equipment_and_gear"
-    / = javascript_include_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    / = stylesheet_link_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    / = javascript_pack_tag "equipment_and_gear"
+    = stylesheet_link_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'
 
   body
     div
@@ -30,6 +29,24 @@ html
       / button.hamburger
       /   | ☰
 
-    img.recording_equipment src=asset_path("recording-equipment.jpeg") alt="Recording Equipment"
+    .container-fluid.py-5
+      .row.justify-content-center
+        .col-12
+          / h1.text-center.display-4.fw-bold.text-shadow-border.mb-5= I18n.t("voice_over_equipment.equipment")
+          
+          .equipment-container
+            .row.align-items-center.g-4
+              .col-md-6.order-md-2
+                img.img-fluid.rounded.shadow src=asset_path("recording-equipment.jpeg") alt="Recording Equipment"
+              .col-md-6.order-md-1
+                .equipment-list
+                  h3.mb-4 Professional Setup
+                  ul.list-unstyled
+                    li.mb-3
+                      i.fas.fa-microphone.me-2
+                      = I18n.t("voice_over_equipment.equipment_one")
+                    li.mb-3
+                      i.fas.fa-sliders-h.me-2
+                      = I18n.t("voice_over_equipment.equipment_two")
     img.background-image src=asset_path("david-kinney-background-d.jpeg")
 
