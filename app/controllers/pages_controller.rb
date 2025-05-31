@@ -14,20 +14,18 @@ class PagesController < ApplicationController
   end
 
   def submit
-    if send_message(name: params[:name], email: params[:email], message: params[:message])
-      render json: { success: true }
-    else
-      render json: { success: false }, status: :unprocessable_entity
-    end
+    page_params = params.require(:page).permit(:name, :email, :message)
+    contact_email = ::MailerNotifier.contact_me(page_params).deliver_now
+    confirmation_email = ::MailerNotifier.confirmation_email(page_params).deliver_now
+   
+    render json: { success: true, contact_email: contact_email, confirmation_email: confirmation_email }
+  rescue => e
+    render json: { success: false }
   end
 
   private
 
   def validate_params
     params.require(:page).permit(:name, :email, :message)
-  end
-
-  def send_message(name:, email:, message:)
-    true
   end
 end
