@@ -141,4 +141,78 @@ nav {
     z-index: -1;    // Keeps it behind content
 }
 
+// .container-fluid.py-5 {
+//   margin-top: 10rem;
+// }
+
+.equipment-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 90%;
+  margin-top: 10rem;
+}
+
+.equipment-list {
+  padding: 1rem;
+  
+  h3 {
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  li {
+    font-size: 1.2rem;
+    color: #444;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateX(10px);
+      color: #007bff;
+    }
+  }
+}
+
+.text-shadow-border {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+img.rounded.shadow {
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 768px) {
+  .equipment-container {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .row.align-items-center {
+    flex-direction: column;
+  }
+
+  .col-md-6 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .equipment-list {
+    padding: 0.5rem;
+    
+    li {
+      font-size: 1rem;
+    }
+  }
+}
+
 

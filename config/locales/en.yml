@@ -13,12 +13,14 @@ en:
     about_me_section_two: Feel free to explore my portfolio and get in touch if you have any questions or collaboration ideas.
   voice_over_equipment: 
     equipment: Equipment
-    equipment_one: Elgato Wave DX Condenser XLR Microphone Focusrite Scarlett Solo Interface
-    equipment_two: DAW - Audacity and Adobe Audition Snap Vocal Sound Booth
+    equipment_one: Rode NT-1 Microphone
+    equipment_two: Rode AI-1 Interface
   voice_over_roles:
     title: List of roles
     walking_dead: Walking Dead Buried Reels
-    derrick: Character role - Derrick
+    derrick: Character Role - Derrick
+    masashi_yasuda: Character Role - Masashi Yasuda
+    supplier: Character Role - Supplier
   demo_reel:
     title: Character Demo Reel
   commercial_reel:

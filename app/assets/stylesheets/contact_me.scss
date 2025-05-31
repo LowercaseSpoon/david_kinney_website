@@ -237,6 +237,10 @@ nav {
   .social-label { color: #0560ff; }
 }
 
+.instagram-hover:hover {
+  .social-label { color: #c32aa3; }
+}
+
 // Responsive adjustments
 @media (max-width: 768px) {
   .social-links {
