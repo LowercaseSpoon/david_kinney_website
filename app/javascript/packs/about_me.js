@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close menu when clicking outside
     document.addEventListener('click', function(event) {
       if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) {
-        navMenu.style.display = 'none';
+        // navMenu.style.display = 'none';
         hamburger.classList.remove('active');
       }
     });
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
-        navMenu.style.display = 'none';
+        // navMenu.style.display = 'none';
         hamburger.classList.remove('active');
       });
     });
