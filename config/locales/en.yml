@@ -5,6 +5,7 @@ en:
     contact_me: Contact Me 
     home: Home
     equipment_and_gear: Equipment and Gear
+    demo_reel: Demo Reel
   name: DAVID KINNEY JR
   voice_actor: Voice Actor
   about_me_box:
@@ -34,6 +35,7 @@ en:
     walking_dead: Walking Dead Buried Reels
     derrick: Character Role - Derrick
     masashi_yasuda: Character Role - Masashi Yasuda
+    customer: Character Role - Customer
     supplier: Character Role - Supplier
   demo_reel:
     title: Character Demo Reel

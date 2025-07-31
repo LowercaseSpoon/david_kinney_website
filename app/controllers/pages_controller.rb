@@ -13,6 +13,9 @@ class PagesController < ApplicationController
   def equipment_and_gear
   end
 
+  def demo_reel
+  end
+
   def submit
     page_params = params.require(:page).permit(:name, :email, :message)
     contact_email = ::MailerNotifier.contact_me(page_params).deliver_now
