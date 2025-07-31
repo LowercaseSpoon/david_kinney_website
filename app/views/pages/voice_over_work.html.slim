@@ -22,6 +22,8 @@ html
         li
           = link_to I18n.t("nav_bar.about_me"), about_me_url
         li
+          = link_to I18n.t("nav_bar.demo_reel"), demo_reel_url
+        li
           = link_to I18n.t("nav_bar.voice_over_work"), voice_over_work_url
         li
           = link_to I18n.t("nav_bar.equipment_and_gear"), equipment_and_gear_url
@@ -34,30 +36,15 @@ html
     #videoCarousel.carousel.slide.mb-5 data-bs-ride="false"
       .carousel-indicators
         button.active[type="button" data-bs-target="#videoCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Walking Dead"]
-        button[type="button" data-bs-target="#videoCarousel" data-bs-slide-to="1" aria-label="Demo Reel"]
-        button[type="button" data-bs-target="#videoCarousel" data-bs-slide-to="2" aria-label="Commercial Reel"]
-        button[type="button" data-bs-target="#videoCarousel" data-bs-slide-to="3" aria-label="Narrative Demo"]
-        button[type="button" data-bs-target="#videoCarousel" data-bs-slide-to="4" aria-label="Character Demo"]
+        button[type="button" data-bs-target="#videoCarousel" data-bs-slide-to="1" aria-label="Narrative Demo"]
+        button[type="button" data-bs-target="#videoCarousel" data-bs-slide-to="2" aria-label="Character Demo"]
+        button[type="button" data-bs-target="#videoCarousel" data-bs-slide-to="3" aria-label="Customer"]
 
       .carousel-inner
         .carousel-item.active
           h2.text-center.mb-4.display-4.fw-bold.text-shadow-border= I18n.t("voice_over_roles.derrick")
           .ratio.ratio-16x9
             iframe[src="https://www.youtube.com/embed/8IsrUioKIjw?si=hFZbURhErL1gO7iv" 
-                  title="YouTube video player" 
-                  allowfullscreen]
-
-        .carousel-item
-          h2.text-center.mb-4.display-4.fw-bold.text-shadow-border= I18n.t("demo_reel.title")
-          .ratio.ratio-16x9.shadow-lg.rounded.overflow-hidden
-            iframe[src="https://www.youtube.com/embed/pgqg6L_CaFQ?si=keNo511d_8bOCIgJ" 
-                  title="YouTube video player" 
-                  allowfullscreen]
-
-        .carousel-item
-          h2.text-center.mb-4.display-4.fw-bold.text-shadow-border= I18n.t("commercial_reel.title")
-          .ratio.ratio-16x9.shadow-lg.rounded.overflow-hidden
-            iframe[src="https://www.youtube.com/embed/FVIMhLK3ciY?si=D7e_dV1bCgtFD4c0" 
                   title="YouTube video player" 
                   allowfullscreen]
 
@@ -72,6 +59,13 @@ html
           h2.text-center.mb-4.display-4.fw-bold.text-shadow-border= I18n.t("voice_over_roles.masashi_yasuda")
           .ratio.ratio-16x9.shadow-lg.rounded.overflow-hidden
             iframe[src="https://www.youtube.com/embed/Oukon1DAjos" 
+                  title="YouTube video player" 
+                  allowfullscreen]
+
+        .carousel-item
+          h2.text-center.mb-4.display-4.fw-bold.text-shadow-border= I18n.t("voice_over_roles.customer")
+          .ratio.ratio-16x9.shadow-lg.rounded.overflow-hidden
+            iframe[src="https://www.youtube.com/embed/6ElNhVnpI_o?si=b-Cqk4aMHo9_UBi0" 
                   title="YouTube video player" 
                   allowfullscreen]
 

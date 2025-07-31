@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Mitr:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Marck+Script&family=Mitr:wght@200&family=Rubik+Bubbles&display=swap');
+
+.name-header {
+  color: green;
+  text-align: center;
+  font-size: 3em; 
+  font-family: 'Audiowide', sans-serif;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: calc(100% + 20px);
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.voice-actor-header {
+  color: green;
+  text-align: center;
+  font-size: 1em; 
+  font-family: 'Marck Script', cursive;
+}
+
+body {
+  background: linear-gradient(to bottom, #cffddd 7%, #ffffff 25%);
+  background-repeat: no-repeat;
+}
+
+.letter-d {
+  width: 30px; 
+  height: auto; 
+  display: inline-block;
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.demo-reel {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; // Adjust the height as needed
+
+  .demo-reel-video {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.demo-reel {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; // Adjust the height as needed
+
+  .commercial-demo-video {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+nav {
+  background: linear-gradient(to right, #7bed9f, #44b39d);
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    li {
+      display: inline-block;
+
+      a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #379683;
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none; /* Hide hamburger by default on large screens */
+    cursor: pointer;
+    padding: 14px 16px;
+    background-color: #44b39d;
+    border: none;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 600px) {
+    ul {
+      display: none; /* Hide the menu by default on small screens */
+      flex-direction: column; /* Stack menu items vertically */
+      width: 100%; /* Take up full width */
+    }
+
+    li {
+      display: block;
+      width: 100%; /* Take up full width */
+      text-align: center; /* Center text */
+    }
+
+    .hamburger {
+      display: block; /* Show the hamburger icon on small screens */
+    }
+  }
+
+  @media screen and (min-width: 601px) {
+    .hamburger {
+      display: none; /* Hide hamburger on large screens */
+    }
+  }
+}
+
+.text-shadow-border {
+  color: #ffffff;
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+  letter-spacing: 1px;
+  
+  background: linear-gradient(45deg, #ffffff, #f0f0f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.background-image {
+  position: fixed;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  height: 80vh; 
+  object-fit: cover;
+  z-index: -1;  
+}
+  
