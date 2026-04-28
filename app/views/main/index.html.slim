@@ -5,28 +5,30 @@ html
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag "homepage"
     = javascript_pack_tag "homepage"
-  
+
   body
     = video_tag "video-intro.mp4", class: "background-video", autoplay: true, muted: true, playsinline: true, id: "intro-video"
-    
+
     div
       p.name-header= I18n.t("name")
       p.voice-actor-header= I18n.t("voice_actor")
 
     nav
       ul
-        li 
+        li
           img.letter-d src=asset_path("letter_d.png")
-        li 
+        li
           = link_to I18n.t("nav_bar.home"), root_url
         li
           = link_to I18n.t("nav_bar.about_me"), about_me_url
-        li 
+        li
           = link_to I18n.t("nav_bar.demo_reel"), demo_reel_url
         li
           = link_to I18n.t("nav_bar.voice_over_work"), voice_over_work_url
-        li 
+        li
           = link_to I18n.t("nav_bar.equipment_and_gear"), equipment_and_gear_url
+        li
+          = link_to I18n.t("nav_bar.resume"), resume_url
         li
          = link_to I18n.t("nav_bar.contact_me"), contact_me_url
 
