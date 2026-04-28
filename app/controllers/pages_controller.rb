@@ -16,11 +16,14 @@ class PagesController < ApplicationController
   def demo_reel
   end
 
+  def resume
+  end
+
   def submit
     page_params = params.require(:page).permit(:name, :email, :message)
     contact_email = ::MailerNotifier.contact_me(page_params).deliver_now
     confirmation_email = ::MailerNotifier.confirmation_email(page_params).deliver_now
-   
+
     render json: { success: true, contact_email: contact_email, confirmation_email: confirmation_email }
   rescue => e
     render json: { success: false }

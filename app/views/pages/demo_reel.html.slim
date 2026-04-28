@@ -28,6 +28,8 @@ html
         li
           = link_to I18n.t("nav_bar.equipment_and_gear"), equipment_and_gear_url
         li
+          = link_to I18n.t("nav_bar.resume"), resume_url
+        li
           = link_to I18n.t("nav_bar.contact_me"), contact_me_url
       button.hamburger
         | ☰
@@ -42,15 +44,15 @@ html
           .carousel-item.active
             h2.text-center.mb-4.display-4.fw-bold.text-shadow-border= I18n.t("demo_reel.title")
             .ratio.ratio-16x9.shadow-lg.rounded.overflow-hidden
-              iframe[src="https://www.youtube.com/embed/uHbcqUDHwB0?si=3Jb-z5CW5FL9ju-C" 
-                    title="YouTube video player" 
+              iframe[src="https://www.youtube.com/embed/uHbcqUDHwB0?si=3Jb-z5CW5FL9ju-C"
+                    title="YouTube video player"
                     allowfullscreen]
 
           .carousel-item
             h2.text-center.mb-4.display-4.fw-bold.text-shadow-border= I18n.t("commercial_reel.title")
             .ratio.ratio-16x9.shadow-lg.rounded.overflow-hidden
-              iframe[src="https://www.youtube.com/embed/FVIMhLK3ciY?si=D7e_dV1bCgtFD4c0" 
-                    title="YouTube video player" 
+              iframe[src="https://www.youtube.com/embed/FVIMhLK3ciY?si=D7e_dV1bCgtFD4c0"
+                    title="YouTube video player"
                     allowfullscreen]
 
         button.carousel-control-prev[type="button" data-bs-target="#demoReelCarousel" data-bs-slide="prev"]
