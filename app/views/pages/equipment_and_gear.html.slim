@@ -7,6 +7,33 @@ html
     = stylesheet_link_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'
     = javascript_pack_tag 'equipment_and_gear'
+    = javascript_include_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    style
+      |
+        .equipment-carousel .carousel-item {
+          height: 420px;
+        }
+
+        .equipment-carousel .carousel-item img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        @media (max-width: 768px) {
+          .equipment-container {
+            position: fixed;
+            top: 22vh;
+            left: 2.5%;
+            right: 2.5%;
+            bottom: 1rem;
+            width: 95%;
+            margin: 0;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+          }
+        }
 
   body
     div
@@ -28,6 +55,8 @@ html
         li
           = link_to I18n.t("nav_bar.equipment_and_gear"), equipment_and_gear_url
         li
+          = link_to I18n.t("nav_bar.resume"), resume_url
+        li
           = link_to I18n.t("nav_bar.contact_me"), contact_me_url
       button.hamburger
         | ☰
@@ -36,11 +65,24 @@ html
       .row.justify-content-center
         .col-12
           / h1.text-center.display-4.fw-bold.text-shadow-border.mb-5= I18n.t("voice_over_equipment.equipment")
-          
+
           .equipment-container
             .row.align-items-center.g-4
               .col-md-6.order-md-2
-                img.img-fluid.rounded.shadow src=asset_path("new-equipment-2026.jpeg") alt="Recording Equipment"
+                #equipmentCarousel.carousel.slide.equipment-carousel data-bs-ride="carousel" data-bs-interval="3500"
+                  .carousel-inner.rounded.shadow
+                    .carousel-item.active
+                      img.img-fluid src=asset_path("new-equipment-2026.jpeg") alt="Recording equipment"
+                    .carousel-item
+                      img.img-fluid src=asset_path("david-kinney-equipment.jpeg") alt="David Kinney equipment"
+                    .carousel-item
+                      img.img-fluid src=asset_path("david-kinney-headphones.jpeg") alt="David Kinney headphones"
+                  button.carousel-control-prev type="button" data-bs-target="#equipmentCarousel" data-bs-slide="prev"
+                    span.carousel-control-prev-icon aria-hidden="true"
+                    span.visually-hidden Previous
+                  button.carousel-control-next type="button" data-bs-target="#equipmentCarousel" data-bs-slide="next"
+                    span.carousel-control-next-icon aria-hidden="true"
+                    span.visually-hidden Next
               .col-md-6.order-md-1
                 .equipment-list
                   h3.mb-4 Professional Setup

@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     post 'contact_me', to: 'pages#submit'
     get 'equipment_and_gear', to: 'pages#equipment_and_gear'
     get 'demo_reel', to: 'pages#demo_reel'
+    get 'resume', to: 'pages#resume'
   end
 end

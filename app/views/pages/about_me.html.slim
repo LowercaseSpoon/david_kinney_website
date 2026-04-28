@@ -13,9 +13,9 @@ html
 
     nav
       ul
-        li 
+        li
           img.letter-d src=asset_path("letter_d.png")
-        li 
+        li
           = link_to I18n.t("nav_bar.home"), root_url
         li
           = link_to I18n.t("nav_bar.about_me"), about_me_url
@@ -26,9 +26,11 @@ html
         li
           = link_to I18n.t("nav_bar.equipment_and_gear"), equipment_and_gear_url
         li
+          = link_to I18n.t("nav_bar.resume"), resume_url
+        li
           = link_to I18n.t("nav_bar.contact_me"), contact_me_url
 
-      button.hamburger 
+      button.hamburger
         | ☰
 
   br
@@ -38,9 +40,9 @@ html
       img src=asset_path("david-kinney-profile-pic.jpeg")
       .content
         h2= I18n.t("about_me_box.about_me")
-        
+
         p= I18n.t("about_me_box.about_me_section_one")
-        
+
         p= I18n.t("about_me_box.about_me_section_two")
 
         h2= I18n.t("about_me_box.about_me_section_three_title")

@@ -2,10 +2,11 @@ en:
   nav_bar:
     about_me: "About Me"
     voice_over_work: Voice Over Work
-    contact_me: Contact Me 
+    contact_me: Contact Me
     home: Home
     equipment_and_gear: Equipment and Gear
     demo_reel: Demo Reel
+    resume: Resume
   name: DAVID KINNEY JR
   voice_actor: Voice Actor
   about_me_box:
@@ -22,7 +23,7 @@ en:
     about_me_section_nine: Auditioning Outside The Box with Heather Gonzalez - 2025
     about_me_section_ten: Booking Your First Roles with Rachel Messer -2025
     about_me_section_eleven: Anime and Video Games with Chris Hackney - 2025
-  voice_over_equipment: 
+  voice_over_equipment:
     equipment: Equipment
     equipment_one: Rode NT-1 Microphone
     equipment_two: Rode AI-1 Interface
@@ -32,11 +33,15 @@ en:
     equipment_six: Joyo Professional Studio Headphones
   voice_over_roles:
     title: List of roles
+    francine: Character Role - Francine
     walking_dead: Walking Dead Buried Reels
     derrick: Character Role - Derrick
     masashi_yasuda: Character Role - Masashi Yasuda
     customer: Character Role - Customer
     supplier: Character Role - Supplier
+  resume:
+    title: Resume
+    content: Resume content
   demo_reel:
     title: Character Demo Reel
   commercial_reel:
