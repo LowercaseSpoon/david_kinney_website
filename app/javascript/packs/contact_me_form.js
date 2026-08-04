@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('form');
-    
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value
+        page: {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          message: document.getElementById('message').value
+        }
       };
-  
+
       const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
-  
+
       fetch('/pages/contact_me', {
         method: 'POST',
         body: JSON.stringify(formData),

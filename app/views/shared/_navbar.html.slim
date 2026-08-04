@@ -1,0 +1,25 @@
+nav.navbar.navbar-expand-lg.navbar-dark.dk-navbar.sticky-top
+  .container
+    = link_to root_path, class: "navbar-brand d-flex align-items-center gap-2" do
+      = image_tag "letter_d.png", alt: "David Kinney", class: "navbar-logo"
+      span.navbar-brand-text.d-none.d-sm-inline David Kinney Jr
+
+    button.navbar-toggler type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation"
+      span.navbar-toggler-icon
+
+    #primaryNav.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+        li.nav-item
+          = link_to I18n.t("nav_bar.home"), root_path, class: "nav-link #{'active' if current_page?(root_path)}"
+        li.nav-item
+          = link_to I18n.t("nav_bar.about_me"), about_me_path, class: "nav-link #{'active' if current_page?(about_me_path)}"
+        li.nav-item
+          = link_to I18n.t("nav_bar.demo_reel"), demo_reel_path, class: "nav-link #{'active' if current_page?(demo_reel_path)}"
+        li.nav-item
+          = link_to I18n.t("nav_bar.voice_over_work"), voice_over_work_path, class: "nav-link #{'active' if current_page?(voice_over_work_path)}"
+        li.nav-item
+          = link_to I18n.t("nav_bar.equipment_and_gear"), equipment_and_gear_path, class: "nav-link #{'active' if current_page?(equipment_and_gear_path)}"
+        li.nav-item
+          = link_to I18n.t("nav_bar.resume"), resume_path, class: "nav-link #{'active' if current_page?(resume_path)}"
+        li.nav-item
+          = link_to I18n.t("nav_bar.contact_me"), contact_me_path, class: "nav-link #{'active' if current_page?(contact_me_path)}"

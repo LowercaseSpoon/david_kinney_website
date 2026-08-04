@@ -1,68 +1,19 @@
-doctype html
-html
-  head
-    title David Kinney VO
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
-    = stylesheet_link_tag "about_me"
-    = javascript_pack_tag 'about_me'
-
-  body
+.page-panel
+  .about-layout
     div
-      p.name-header= I18n.t("name")
-      p.voice-actor-header= I18n.t("voice_actor")
-
-    nav
-      ul
-        li
-          img.letter-d src=asset_path("letter_d.png")
-        li
-          = link_to I18n.t("nav_bar.home"), root_url
-        li
-          = link_to I18n.t("nav_bar.about_me"), about_me_url
-        li
-          = link_to I18n.t("nav_bar.demo_reel"), demo_reel_url
-        li
-          = link_to I18n.t("nav_bar.voice_over_work"), voice_over_work_url
-        li
-          = link_to I18n.t("nav_bar.equipment_and_gear"), equipment_and_gear_url
-        li
-          = link_to I18n.t("nav_bar.resume"), resume_url
-        li
-          = link_to I18n.t("nav_bar.contact_me"), contact_me_url
-
-      button.hamburger
-        | ☰
-
-  br
-  br
-  div.section
-    .about-me-box
-      img src=asset_path("david-kinney-profile-pic.jpeg")
-      .content
-        h2= I18n.t("about_me_box.about_me")
-
-        p= I18n.t("about_me_box.about_me_section_one")
-
-        p= I18n.t("about_me_box.about_me_section_two")
-
-        h2= I18n.t("about_me_box.about_me_section_three_title")
-
-        p= I18n.t("about_me_box.about_me_section_three")
-
-        p= I18n.t("about_me_box.about_me_section_four")
-
-        p= I18n.t("about_me_box.about_me_section_five")
-
-        p= I18n.t("about_me_box.about_me_section_six")
-
-        p= I18n.t("about_me_box.about_me_section_seven")
-
-        p= I18n.t("about_me_box.about_me_section_eight")
-
-        p= I18n.t("about_me_box.about_me_section_nine")
-
-        p= I18n.t("about_me_box.about_me_section_ten")
-
-        p= I18n.t("about_me_box.about_me_section_eleven")
-
-img.background-image src=asset_path("david-kinney-background-d.jpeg")
+      = image_tag "david-kinney-profile-pic.jpeg", alt: "David Kinney Jr", class: "about-photo"
+    .about-content
+      h1.h2.mb-3= I18n.t("about_me_box.about_me")
+      p= I18n.t("about_me_box.about_me_section_one")
+      p= I18n.t("about_me_box.about_me_section_two")
+      h2.h4.mt-4.mb-3= I18n.t("about_me_box.about_me_section_three_title")
+      ul.about-workshops
+        li= I18n.t("about_me_box.about_me_section_three")
+        li= I18n.t("about_me_box.about_me_section_four")
+        li= I18n.t("about_me_box.about_me_section_five")
+        li= I18n.t("about_me_box.about_me_section_six")
+        li= I18n.t("about_me_box.about_me_section_seven")
+        li= I18n.t("about_me_box.about_me_section_eight")
+        li= I18n.t("about_me_box.about_me_section_nine")
+        li= I18n.t("about_me_box.about_me_section_ten")
+        li= I18n.t("about_me_box.about_me_section_eleven")

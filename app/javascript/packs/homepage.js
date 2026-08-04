@@ -1,22 +1,32 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Hamburger menu functionality
-    const menuButton = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav ul');
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("intro-video");
 
-    if (menuButton && navMenu) {
-        menuButton.addEventListener('click', function () {
-            navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
-        });
+  if (!video) return;
+
+  const revealSite = function () {
+    if (video.parentNode) {
+      video.remove();
     }
+    document.body.classList.remove("video-playing");
+  };
 
-    // Video functionality
-    const video = document.getElementById('intro-video');
-    console.log("video loaded")
-    
-    if (video) {
-      video.addEventListener('ended', function() {
-        video.remove();
-        console.log("video removed")
+  video.addEventListener("ended", revealSite);
+  video.addEventListener("error", revealSite);
+
+  // Some browsers need an explicit play() after load, even with autoplay + muted
+  const tryPlay = function () {
+    const playPromise = video.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(function () {
+        // Autoplay blocked or decode failed — don't leave users on a black screen
+        revealSite();
       });
     }
-  });
+  };
+
+  if (video.readyState >= 2) {
+    tryPlay();
+  } else {
+    video.addEventListener("loadeddata", tryPlay, { once: true });
+  }
+});
