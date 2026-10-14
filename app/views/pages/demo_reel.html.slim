@@ -1,25 +1,19 @@
 .page-panel
   #demoReelCarousel.carousel.slide.media-carousel data-bs-ride="false"
     .carousel-indicators
-      button.active type="button" data-bs-target="#demoReelCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Demo Reel"
-      button type="button" data-bs-target="#demoReelCarousel" data-bs-slide-to="1" aria-label="Character Demo Reel"
-      button type="button" data-bs-target="#demoReelCarousel" data-bs-slide-to="2" aria-label="Commercial Reel"
+      button.active type="button" data-bs-target="#demoReelCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Commercial Demo 2.0"
+      button type="button" data-bs-target="#demoReelCarousel" data-bs-slide-to="1" aria-label="Demo Reel"
 
     .carousel-inner
       .carousel-item.active
+        h2.text-center= I18n.t("commercial_reel.new_title")
+        .ratio.ratio-16x9.rounded.overflow-hidden
+          iframe src="https://www.youtube.com/embed/5PE3DR2GBq8?si=FjqFvk0s6RMxkkPR" title="Commercial Demo 2.0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""
+
+      .carousel-item
         h2.text-center= I18n.t("demo_reel.new_title")
         .ratio.ratio-16x9.rounded.overflow-hidden
           iframe src="https://www.youtube.com/embed/FfWOmnvI5j0?si=xTiCoXeXITMvQAPg" title="Demo Reel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""
-
-      .carousel-item
-        h2.text-center= I18n.t("demo_reel.title")
-        .ratio.ratio-16x9.rounded.overflow-hidden
-          iframe src="https://www.youtube.com/embed/uHbcqUDHwB0?si=3Jb-z5CW5FL9ju-C" title="Character Demo Reel" allowfullscreen=""
-
-      .carousel-item
-        h2.text-center= I18n.t("commercial_reel.title")
-        .ratio.ratio-16x9.rounded.overflow-hidden
-          iframe src="https://www.youtube.com/embed/FVIMhLK3ciY?si=D7e_dV1bCgtFD4c0" title="Commercial Demo" allowfullscreen=""
 
     button.carousel-control-prev type="button" data-bs-target="#demoReelCarousel" data-bs-slide="prev"
       span.carousel-control-prev-icon aria-hidden="true"
